@@ -21,8 +21,7 @@ namespace LegoSetInventoryManager.Data
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-
-           => options.UseSqlServer("");
+            => options.UseSqlServer("Server=localhost,1433; Database=LegoSetDB;User=mlrainer; Password=Etid267498!");
 
 
         public DBContext()
