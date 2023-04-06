@@ -1,0 +1,52 @@
+﻿@model IEnumerable<LegoSetInventoryManager.Models.SetName>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/CreateStyleSheet.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lego Sets in Database</h1>
+
+<div class="table-wrapper">
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SetNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pieces)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MiniFigs)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Complete)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
