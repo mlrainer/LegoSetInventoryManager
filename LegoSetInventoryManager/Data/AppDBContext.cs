@@ -9,7 +9,6 @@ namespace LegoSetInventoryManager.Demo.Data
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
             Database.EnsureCreated();
-            DBInitializer.Initialize(this);
         }
 
         public DbSet<SetName> SetNames { get; set; }

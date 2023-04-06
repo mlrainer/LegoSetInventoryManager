@@ -30,7 +30,7 @@ using (var scope = app.Services.CreateScope())
     // uncomment the line below to re-create the database upon each run.
     //context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
-    DBInitializer.Initialize(context);
+    
 }
 
 app.UseHttpsRedirection();

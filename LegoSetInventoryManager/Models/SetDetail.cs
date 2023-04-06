@@ -9,6 +9,7 @@ namespace LegoSetInventoryManager.Models
 {
     public class SetDetail
     {
+
         [Required]
 
         [StringLength(100)]
